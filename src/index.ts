@@ -1,7 +1,12 @@
-import * as fs from 'fs'
-import diff from '@ba0918/stackgamesempire-gift-list-diff'
+import diff from "@ba0918/stackgamesempire-gift-list-diff"
+import * as fs from "fs"
 
-export async function start(url: string, steamkey: string, steamid: string, output: string): Promise<void> {
+export async function start(
+  url: string,
+  steamkey: string,
+  steamid: string,
+  output: string
+): Promise<void> {
   return diff(url, steamkey, steamid).then(res => {
     const text: string[] = []
 
@@ -9,7 +14,7 @@ export async function start(url: string, steamkey: string, steamid: string, outp
     text.push("【Owned games】")
     res.owned_gifts.map((gift: any) => text.push(gift.name))
     text.push("", "")
-    
+
     // unowned games
     text.push("【Unowned games】")
     res.unowned_gifts.map((gift: any) => text.push(gift.name))

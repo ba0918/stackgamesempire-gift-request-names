@@ -1,6 +1,6 @@
 {
   "name": "@ba0918/stackgamesempire-gift-request-names",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "repository": "https://github.com/ba0918/stackgamesempire-gift-request-names",
@@ -18,8 +18,11 @@
     "build": "cross-env NODE_ENV=production tsc -p ."
   },
   "dependencies": {
-    "@ba0918/stackgamesempire-gift-list-diff": "^0.0.2",
-    "meow": "^4.0.0"
+    "@ba0918/stackgamesempire-gift-list-diff": "^0.0.4",
+    "meow": "^4.0.0",
+    "prettier": "^1.14.2",
+    "tslint": "^5.11.0",
+    "tslint-config-prettier": "^1.14.0"
   },
   "devDependencies": {
     "@types/node": "^8.5.2",
